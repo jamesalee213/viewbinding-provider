@@ -6,6 +6,10 @@ dependencyResolutionManagement {
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
+
 rootProject.name = "ViewBindingProvider"
-include ':demo:app'
-include ':library'
+
+include(
+    ":demo:app",
+    ":library",
+)
