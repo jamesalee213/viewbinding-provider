@@ -9,11 +9,15 @@ import com.jal.viewbinding.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
 
+    private val viewBindingProvider = ViewBindingProvider<FragmentMainBinding>()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return FragmentMainBinding.inflate(layoutInflater, container, false).root
+        return viewBindingProvider.inflate {
+            FragmentMainBinding.inflate(layoutInflater, container, false)
+        }
     }
 }

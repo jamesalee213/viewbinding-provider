@@ -1,11 +1,18 @@
 package com.jal.viewbinding
 
-class ViewBindingProvider<T> {
+import android.view.View
+import androidx.viewbinding.ViewBinding
 
-    // TODO: add nullable ViewBinding variable
+// TODO("add lifecycle")
+class ViewBindingProvider<T : ViewBinding> {
 
-    // TODO: add bind method that returns view
-    //       - params: inflater/container
+    var binding: T? = null
+
+    fun inflate(inflate: () -> T): View {
+       return inflate().also {
+           binding = it
+       }.root
+    }
 }
 
 // TODO: add Fragment extension for getting lifecycle owner
