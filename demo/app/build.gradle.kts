@@ -39,7 +39,10 @@ dependencies {
     implementation(AndroidX.appCompat)
     implementation(Google.android.material)
     implementation(AndroidX.constraintLayout)
+
+    implementation(project(":library"))
+
     testImplementation(Testing.junit4)
     androidTestImplementation(AndroidX.test.ext.junit)
-    androidTestImplementation(AndroidX.test.espresso)
+    androidTestImplementation(AndroidX.test.espresso.core)
 }

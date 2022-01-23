@@ -37,5 +37,5 @@ dependencies {
     implementation(Google.android.material)
     testImplementation(Testing.junit4)
     androidTestImplementation(AndroidX.test.ext.junit)
-    androidTestImplementation(AndroidX.test.espresso)
+    androidTestImplementation(AndroidX.test.espresso.core)
 }
