@@ -7,7 +7,7 @@ import com.jal.viewbinding.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val rooView = ViewBindingProvider<ActivityMainBinding>().inflate {
+        val rooView = ViewBindingProvider<ActivityMainBinding>().initialize {
             ActivityMainBinding.inflate(layoutInflater)
         }
         setContentView(rooView)

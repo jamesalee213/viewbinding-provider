@@ -1,20 +1,22 @@
 package com.jal.viewbinding
 
 import android.view.View
+import androidx.lifecycle.DefaultLifecycleObserver
+import androidx.lifecycle.LifecycleOwner
 import androidx.viewbinding.ViewBinding
 
-// TODO("add lifecycle")
-class ViewBindingProvider<T : ViewBinding> {
+class ViewBindingProvider<T : ViewBinding> : DefaultLifecycleObserver {
 
     var binding: T? = null
 
-    fun inflate(inflate: () -> T): View {
-       return inflate().also {
+    fun initialize(init: () -> T): View {
+       return init().also {
            binding = it
        }.root
     }
-}
 
-// TODO: add Fragment extension for getting lifecycle owner
-//       - get lifecycle owner
-// might have to consider something for Activity
+    override fun onDestroy(owner: LifecycleOwner) {
+        binding = null
+        super.onDestroy(owner)
+    }
+}
