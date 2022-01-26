@@ -7,7 +7,7 @@ Android's [view binding](https://developer.android.com/topic/libraries/view-bind
 You no longer have to find your views or worry about casting them. <br>
 However, you have to keep track of the binding if you are using it in a fragment.
 
-```
+```kotlin
 private var _binding: ResultProfileBinding? = null
 // This property is only valid between onCreateView and
 // onDestroyView.
@@ -33,7 +33,7 @@ override fun onDestroyView() {
 With this library, you no longer have to keep track of it!<br> 
 Just use the ViewBindingProvider and it will keep track of the binding with the fragment's view lifecycle owner <br>
 
-```
+```kotlin
 private val viewBindingProvider by viewBindingProvider<ResultProfileBinding>()
 
 override fun onCreateView(
