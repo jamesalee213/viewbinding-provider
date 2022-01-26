@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.jal.viewbinding.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
@@ -32,8 +33,13 @@ class MainFragment : Fragment() {
     private fun setUpButton() {
         viewBindingProvider.binding?.apply {
             button.setOnClickListener {
-                Toast.makeText(requireContext(), "Button Clicked", Toast.LENGTH_SHORT).show()
+                findNavController().navigate(MainFragmentDirections.toSecondFragment())
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        checkViewBinding(viewBindingProvider.binding)
     }
 }

@@ -7,7 +7,8 @@ import kotlin.reflect.KProperty
 inline fun <reified T : ViewBinding> Fragment.viewBindingProvider(): ViewBindingProvider<T> {
     return ViewBindingProvider<T>().apply {
         viewLifecycleOwnerLiveData.observeForever {
-            it.lifecycle.addObserver(this)
+            it?.lifecycle?.addObserver(this)
+
         }
     }
 }
