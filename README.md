@@ -32,6 +32,7 @@ override fun onDestroyView() {
 <br>
 With this library, you no longer have to keep track of it!<br> 
 Just use the ViewBindingProvider and it will keep track of the binding with the fragment's view lifecycle owner <br>
+You can look at [MainFragment](https://github.com/jamesalee213/viewbinding-provider/blob/main/demo/app/src/main/java/com/jal/viewbinding/MainFragment.kt) in the demo for more detailed example <br>
 
 ```kotlin
 private val viewBindingProvider by viewBindingProvider<ResultProfileBinding>()
