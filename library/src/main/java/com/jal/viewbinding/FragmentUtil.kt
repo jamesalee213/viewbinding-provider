@@ -8,7 +8,6 @@ inline fun <reified T : ViewBinding> Fragment.viewBindingProvider(): ViewBinding
     return ViewBindingProvider<T>().apply {
         viewLifecycleOwnerLiveData.observeForever {
             it?.lifecycle?.addObserver(this)
-
         }
     }
 }

@@ -7,11 +7,11 @@ import androidx.viewbinding.ViewBinding
 fun <T : ViewBinding> Fragment.checkViewBinding(viewBinding: T?) {
     val fragmentName = this::class.simpleName.toString()
 
-    println("### Example from $fragmentName: ViewBinding is $viewBinding")
+    println("### Example from $fragmentName: view binding is $viewBinding")
 
     Toast.makeText(
         requireContext(),
-        "$fragmentName ViewBinding is: $viewBinding",
+        "$fragmentName view binding is: $viewBinding",
         Toast.LENGTH_SHORT
     ).show()
 }
