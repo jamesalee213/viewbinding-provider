@@ -40,3 +40,17 @@ dependencies {
     androidTestImplementation(AndroidX.test.ext.junit)
     androidTestImplementation(AndroidX.test.espresso.core)
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            register("defaultAar", MavenPublication::class) {
+                from(components["release"])
+
+                groupId = "com.github.jamesalee213"
+                artifactId = "viewbinding-provider"
+                version = "1.0.0"
+            }
+        }
+    }
+}
