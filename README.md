@@ -3,6 +3,23 @@
 [ViewBindingProvider](https://github.com/jamesalee213/viewbinding-provider/blob/main/library/src/main/java/com/jal/viewbinding/ViewBindingProvider.kt) is a library designed to help you easily integrate Android's view binding to your fragments. <br>
 It keeps track of the view binding with fragment view's lifecycle, so that you don't have to.
 
+## Dependency
+Add it in your root build.gradle at the end of repositories:
+```groovy
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+Add the dependency
+```groovy
+dependencies {
+    implementation 'com.github.jamesalee213:viewbinding-provider:1.0.5'
+}
+```
+
 ## Problem
 Android's [view binding](https://developer.android.com/topic/libraries/view-binding) is great!
 You no longer have to find your views or worry about casting them. <br>
