@@ -1,6 +1,6 @@
 # Lifecycle Aware ViewBindingProvider
 
-ViewBindingProvider is a library designed to help you easily integrate Android's view binding to your fragments. <br>
+[ViewBindingProvider](https://github.com/jamesalee213/viewbinding-provider/blob/main/library/src/main/java/com/jal/viewbinding/ViewBindingProvider.kt) is a library designed to help you easily integrate Android's view binding to your fragments. <br>
 It keeps track of the view binding with fragment view's lifecycle, so that you don't have to.
 
 Android's [view binding](https://developer.android.com/topic/libraries/view-binding) is great!
