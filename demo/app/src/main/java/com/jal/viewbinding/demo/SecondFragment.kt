@@ -1,11 +1,13 @@
-package com.jal.viewbinding
+package com.jal.viewbinding.demo
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.jal.viewbinding.databinding.FragmentSecondBinding
+import com.jal.viewbinding.checkViewBinding
+import com.jal.viewbinding.demo.databinding.FragmentSecondBinding
+import com.jal.viewbinding.viewBindingProvider
 
 class SecondFragment : Fragment() {
 

@@ -1,4 +1,4 @@
-package com.jal.viewbinding
+package com.jal.viewbinding.demo
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.jal.viewbinding.databinding.FragmentMainBinding
+import com.jal.viewbinding.checkViewBinding
+import com.jal.viewbinding.demo.databinding.FragmentMainBinding
+import com.jal.viewbinding.viewBindingProvider
 
 class MainFragment : Fragment() {
 

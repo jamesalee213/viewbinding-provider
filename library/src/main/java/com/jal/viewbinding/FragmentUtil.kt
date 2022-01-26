@@ -2,7 +2,6 @@ package com.jal.viewbinding
 
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-import kotlin.reflect.KProperty
 
 inline fun <reified T : ViewBinding> Fragment.viewBindingProvider(): ViewBindingProvider<T> {
     return ViewBindingProvider<T>().apply {
@@ -11,8 +10,3 @@ inline fun <reified T : ViewBinding> Fragment.viewBindingProvider(): ViewBinding
         }
     }
 }
-
-operator fun <T : ViewBinding> ViewBindingProvider<T>.getValue(
-    thisRef: Any?,
-    property: KProperty<*>
-): ViewBindingProvider<T> = this

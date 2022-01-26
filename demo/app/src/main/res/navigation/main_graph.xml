@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.jal.viewbinding.MainFragment"
+        android:name="com.jal.viewbinding.demo.MainFragment"
         android:label="@string/hello_world"
         tools:layout="@layout/fragment_main">
 
@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.jal.viewbinding.SecondFragment"
+        android:name="com.jal.viewbinding.demo.SecondFragment"
         android:label="@string/second_fragment"
         tools:layout="@layout/fragment_second" />
 
